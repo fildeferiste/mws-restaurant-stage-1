@@ -227,6 +227,8 @@ nav h1 a {
 #restaurants-list li a:focus {
 	background-color: #3397DB;
 	outline: none;
+	transition-delay: 0.2s;
+	border: 1px solid orange;
 }
 
 
@@ -377,6 +379,26 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+
+.skip-link {
+	position: absolute;
+	top: -100px;
+	left: 0;
+	background-color: darkred;
+	color: white;
+	padding: 10px;
+	z-index: 100;
+	border-radius: 5px;
+}
+
+.skip-link:focus {
+	top: 0;
+	color: white;
+	outline-color: #f58500;
+
+}
+
+/*-------------------Responsive-------------*/
 
 @media screen and (max-width: 500px) {
 }
