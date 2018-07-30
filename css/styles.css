@@ -64,7 +64,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 /* ====================== Navigation ====================== */
 nav {
   width: 100%;
-  height: 80px;
+  height: 90px;
   background-color: #252831;
   text-align:center;
 }
@@ -126,7 +126,7 @@ nav h1 a {
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
-  height: 100px;
+  height: 150px;
   background-color: #3397DB;
   align-items: center;
 }
@@ -171,9 +171,8 @@ option:focus{
 #restaurants-list {
   background-color: #f3f3f3;
   list-style: outside none none;
-  margin: 0;
   padding: 30px 15px 60px;
-  text-align: center;
+	margin: 0;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -184,7 +183,7 @@ option:focus{
   font-family: Arial,sans-serif;
   margin: 15px;
   min-height: 380px;
-  padding: 0 30px 25px;
+  padding: 15px 30px 25px;
   text-align: left;
   width: 270px;
 	box-shadow: 5px 5px 9px 2px silver;
@@ -196,7 +195,7 @@ option:focus{
   display: block;
   margin: 0;
   max-width: 100%;
-  min-height: 248px;
+  /*min-height: 248px; */
   min-width: 100%;
 	margin-top: 25px;
 	border-radius: 7px;
@@ -408,9 +407,48 @@ option:focus{
 }
 
 /*-------------------Responsive-------------*/
-
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 1300px) {
+	body {
+		width: 1300px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
-@media screen and (min-width: 501px) {
+@media screen and (min-width: 771px) {
+	#restaurants-list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#restaurants-list li {
+		width: 270px;
+		display: block;
+	}
+}
+
+@media screen and (min-width: 601px) and (max-width: 770px){
+	#restaurants-list li {
+		width: 400px;
+	}
+}
+
+@media screen and (min-width: 400px) and (max-width: 770px) {
+	#restaurants-list {
+		display: table;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media screen and (min-width: 500px) {
+	nav {
+		height: 80px;
+	}
+
+	.filter-options {
+		height: 100px;
+	}
 }

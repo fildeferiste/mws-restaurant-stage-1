@@ -34,6 +34,8 @@ self.addEventListener('fetch', function(event) {
   );
 });
 
+// Display message if new u
+
 /*self.addEventListener('fetch', function(event) {
   event.respondWith(
     fetch(event.request).then(function(response){
