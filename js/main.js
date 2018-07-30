@@ -71,14 +71,6 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
 
 }
 
-/**
-  * Focus for dropdown neighborhood and cuisines
-**/
-// const option = document.querySelectorAll('option');
-// console.log(option.activeElement);
-// option[1].addEventListener('keypress', function() {
-//     option.style.backgroundColor = 'red';
-//  });
 
 /**
  * Initialize leaflet map, called from HTML.

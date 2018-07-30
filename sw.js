@@ -1,7 +1,25 @@
 let staticCacheName = 'restaurant-review-v1';
-// Create Cache
+
+self.addEventListener('load', function(){
+    console.log(navigator.serviceWorker);
+    if(!navigator.serviceWorker) return;
+
+    navigator.serviceWorker.register('/sw.js')
+      .then(function(){
+        console.log('Service Worker registered.');
+      })
+      .catch(function(){
+        console.log('How did you end up here?');
+      });
+});
+
+
+// Create Cache and files to be cached
 self.addEventListener('install', function(event){
-  const files = ['/'];
+  const files = ['/',
+                '/js',
+                '/css',
+                ];
   event.waitUntil(
     caches.open(staticCacheName).then(function(cache){
       return cache.addAll(files);
@@ -20,53 +38,6 @@ self.addEventListener('activate', function(event){
       }).map(function(cacheName){
         return cache.delete(cacheName);
       })
-    }))
+    )})
   );
-});
-
-// Update from cache, if doesn't exist, get from server
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request).then(function(response){
-      if(response) return response;
-      return fetch(event.request);
-    })
-  );
-});
-
-// Display message if new u
-
-/*self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    fetch(event.request).then(function(response){
-      // returns promise - eventual response of promise
-      if (response.status == 404) {
-        new Response('nothingness');
-      }
-
-    })
-    .catch(function() {
-      new Response('oho!');
-    })
-  );
-  if(event.request.url.endsWith('.jpg')) {
-    event.respondWith(
-      fetch('/img/1.jpg')
-    );
-  }
-
-}); */
-
-// Register Service Worker TODO: CHECK THIS! LOAD!
-self.addEventListener('load', function(){
-    console.log(navigator.serviceWorker);
-    if(!navigator.serviceWorker) return;
-
-    navigator.serviceWorker.register('/sw.js')
-      .then(function(){
-        console.log('Service Worker registered.');
-      })
-      .catch(function(){
-        console.log('How did you end up here?');
-      });
 });

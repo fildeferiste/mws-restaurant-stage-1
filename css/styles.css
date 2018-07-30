@@ -151,10 +151,6 @@ nav h1 a {
   width: 200px;
 }
 
-option {
-	background-color: green;
-}
-
 
 #neighborhoods-select:focus {
 	outline: 2px solid #f18200;
@@ -163,9 +159,6 @@ option {
 	outline: 2px solid #f18200;
 }
 
-option:focus{
-	display: inline-flex;
-}
 
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
