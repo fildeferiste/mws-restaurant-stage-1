@@ -312,12 +312,8 @@ option:focus{
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 40px 40px 30px;
+  padding: 40px 20px 30px;
 	display: inline-block;
-}
-
-#reviews-container {
-  padding: 30px 40px 80px;
 }
 
 #reviews-container h2 {
@@ -342,7 +338,7 @@ option:focus{
   overflow: hidden;
   padding: 0;
   position: relative;
-  width: 85%;
+  width: 100%;
 	border-radius: 20px 0;
 }
 
@@ -415,6 +411,7 @@ option:focus{
 	}
 }
 
+
 @media screen and (min-width: 771px) {
 	#restaurants-list {
 		display: flex;
@@ -427,11 +424,49 @@ option:focus{
 		width: 270px;
 		display: block;
 	}
-}
+
+	#reviews-list {
+		max-width: 600px;
+	}
+
+	#restaurant-container, #reviews-container {
+		padding: 40px 40px 30px;
+	}
+	}
+
+@media screen and (min-width: 770px) {
+	#maincontent {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	#map-container {
+		width: 40%;
+		height: 650px;
+		padding: 87px 10px 20px 0;
+		order: 2;
+	}
+	#map {
+		height: 100%;
+	}
+	#restaurant-container{
+		width: 55%;
+		padding: 0 5px 0 20px;
+		order: 1;
+	}
+	#reviews-container {
+		order: 3;
+	}
+	}
 
 @media screen and (min-width: 601px) and (max-width: 770px){
 	#restaurants-list li {
 		width: 400px;
+	}
+	#reviews-list {
+		width: 85%;
+	}
+	#restaurant-container, #reviews-container {
+		padding: 40px 40px 30px;
 	}
 }
 
