@@ -435,25 +435,25 @@ option:focus{
 	}
 
 @media screen and (min-width: 770px) {
-	#maincontent {
+	.inside #maincontent {
 		display: flex;
 		flex-wrap: wrap;
 	}
-	#map-container {
+	.inside #map-container {
 		width: 40%;
 		height: 650px;
 		padding: 87px 10px 20px 0;
 		order: 2;
 	}
-	#map {
+	.inside #map {
 		height: 100%;
 	}
-	#restaurant-container{
+	.inside #restaurant-container{
 		width: 55%;
 		padding: 0 5px 0 20px;
 		order: 1;
 	}
-	#reviews-container {
+	.inside #reviews-container {
 		order: 3;
 	}
 	}
