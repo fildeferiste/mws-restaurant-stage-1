@@ -32,6 +32,7 @@ fetchNeighborhoods = () => {
  */
 fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
   const select = document.getElementById('neighborhoods-select');
+  select.setAttribute('role', 'listbox');
   neighborhoods.forEach(neighborhood => {
     const option = document.createElement('option');
     option.innerHTML = neighborhood;
@@ -59,6 +60,7 @@ fetchCuisines = () => {
  */
 fillCuisinesHTML = (cuisines = self.cuisines) => {
   const select = document.getElementById('cuisines-select');
+  select.setAttribute('role', 'listbox');
 
   cuisines.forEach(cuisine => {
     const option = document.createElement('option');
@@ -66,7 +68,17 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
     option.value = cuisine;
     select.append(option);
   });
+
 }
+
+/**
+  * Focus for dropdown neighborhood and cuisines
+**/
+// const option = document.querySelectorAll('option');
+// console.log(option.activeElement);
+// option[1].addEventListener('keypress', function() {
+//     option.style.backgroundColor = 'red';
+//  });
 
 /**
  * Initialize leaflet map, called from HTML.
@@ -88,18 +100,7 @@ initMap = () => {
 
   updateRestaurants();
 }
-/* window.initMap = () => {
-  let loc = {
-    lat: 40.722216,
-    lng: -73.987501
-  };
-  self.map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 12,
-    center: loc,
-    scrollwheel: false
-  });
-  updateRestaurants();
-} */
+
 
 /**
  * Update page and map for current restaurants.
@@ -157,13 +158,16 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
+  li.setAttribute('aria-labelledby', 'restaurant-name' );
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.setAttribute('alt', restaurant.alt);
   li.append(image);
 
   const name = document.createElement('h1');
+  name.setAttribute('id', 'restaurant-name');
   name.innerHTML = restaurant.name;
   li.append(name);
 
@@ -177,6 +181,7 @@ createRestaurantHTML = (restaurant) => {
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
+  more.setAttribute('aria-labelledby', 'restaurant-name');
   more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more)
 
