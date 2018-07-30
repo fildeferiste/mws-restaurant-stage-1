@@ -155,6 +155,7 @@ nav h1 a {
 #neighborhoods-select:focus {
 	outline: 2px solid #f18200;
 }
+
 #cuisines-select:focus {
 	outline: 2px solid #f18200;
 }
@@ -224,6 +225,7 @@ nav h1 a {
 	border-radius: 7px;
 	box-shadow: 3px 3px 5px grey;
 }
+
 #restaurants-list li a:hover,
 #restaurants-list li a:focus {
 	background-color: #3397DB;
@@ -239,34 +241,6 @@ nav h1 a {
   width: 100%;
   z-index: 1000;
 }
-
-/* .inside #map-container {
-  background: blue none repeat scroll 0 0;
-  height: 30%;
-  position: absolute;
-  right: 0;
-  /* top: 80px; */
-  /* width: 100%;
-	min-height: 30%;
-	z-index: 1;
-	display: block;
-} */
-
-/* .inside #map-container {
-	width: 100%;
-}
-
-.inside #map {
-  background-color: #ccc;
-  height: 100%;
-  width: 100%;
-} */
-
-/* .inside #footer {
-  bottom: 0;
-  /* position: absolute; */
-  /*width: 100%;
-} */
 
 #restaurant-name {
   color: #f18200;
@@ -338,6 +312,7 @@ nav h1 a {
 #reviews-list li p {
   margin: 0 0 10px;
 }
+
 #reviews-list p {
 	margin-top: 5px;
 }
