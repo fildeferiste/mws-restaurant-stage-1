@@ -195,7 +195,7 @@ nav h1 a {
 	border-radius: 7px;
 }
 
-#restaurants-list li h1 {
+#restaurants-list li h3 {
   color: #f18200;
   font-family: Arial,sans-serif;
   font-size: 14pt;
@@ -269,7 +269,7 @@ nav h1 a {
   font-size: 12pt;
   font-weight: 300;
   letter-spacing: 10px;
-  margin: 0 0 20px;
+  margin: 5px 0 20px;
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
@@ -283,7 +283,7 @@ nav h1 a {
 	display: inline-block;
 }
 
-#reviews-container h2 {
+#reviews-container h3 {
   color: #f58500;
   font-size: 24pt;
   font-weight: 300;
